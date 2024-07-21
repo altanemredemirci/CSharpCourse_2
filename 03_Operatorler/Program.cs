@@ -150,9 +150,6 @@
 
 
             #endregion
-
-            Console.WriteLine("Yeni Kod2 Yazıldı");
-            Console.WriteLine("Yeni Kod3 Yazıldı");
         }
     }
 }
