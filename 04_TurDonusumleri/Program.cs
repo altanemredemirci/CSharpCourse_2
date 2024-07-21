@@ -63,14 +63,72 @@
             // ÖRNEK:
             // Kullanıcıdan 2 kardeşin yaşını alarak ortalamasını ekrana yazdırınız
 
-            Console.WriteLine("1. kardeşin yaşı");
-            int yas1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("1. kardeşin yaşı");
+            //int yas1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("2. kardeşin yaşı");
-            int yas2 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("2. kardeşin yaşı");
+            //int yas2 = Convert.ToInt32(Console.ReadLine());
 
-            double sonuc = (yas1 + yas2) / 2.0;
-            Console.WriteLine(sonuc);
+            //double sonuc = (yas1 + yas2) / 2.0;
+            //Console.WriteLine(sonuc);
+
+
+            // STRING aslında karakterler topluluğudur(array - koleksiyon).
+            // 
+
+            //string isim = "altan emre";
+            ////koleksiyonlar içerisindeki değerleri INDEX adı verilen 0 dan başlayan 1'er 1'er artan bir numaralandırma yöntemi ile tutarlar.
+
+
+            //Console.WriteLine(isim.IndexOf('e'));
+            //Console.WriteLine(isim.LastIndexOf('e'));
+
+
+
+
+            //string metin = "    Ali      ";
+            //Console.WriteLine(metin);
+            //Console.WriteLine(metin.TrimStart(' '));
+            //Console.WriteLine(metin.TrimEnd(' '));
+            //Console.WriteLine(metin.Trim(' '));
+
+
+            //string ad = "altan";
+            //string soyad = "EMRE";
+
+            //Console.WriteLine(ad.ToUpper());
+            //Console.WriteLine(soyad.ToLower());
+
+            //ad = ad.ToUpper();
+
+            //Console.WriteLine(ad);
+            //Console.WriteLine(ad);
+            //Console.WriteLine(ad);
+            //Console.WriteLine(ad);
+
+
+
+            //string metin = "Bu Türkiye yaşanmaz oldu.";
+
+            //Console.WriteLine(metin.Substring(3));
+            //Console.WriteLine(metin.Substring(3,5));
+
+
+            // ** DATETIME TİPİ **
+            //DateTime zaman = DateTime.Now;
+
+            //Console.WriteLine(zaman);
+            //Console.WriteLine(zaman.Year);
+            //Console.WriteLine(zaman.Month);
+            //Console.WriteLine(zaman.Day);
+            //Console.WriteLine(zaman.Hour);
+            //Console.WriteLine(zaman.Minute);
+            //Console.WriteLine(zaman.Second);
+
+
+            DateTime zaman2 = new DateTime(2000, 12, 24,12,34,45);
+            Console.WriteLine(zaman2);
+
 
         }
     }
