@@ -56,7 +56,7 @@
             #endregion
 
 
-            #region Kıyaslama Oparatörleri
+            #region Karşılaştırma Oparatörleri
 
             /*
             > 
@@ -146,6 +146,49 @@
 
             //Console.WriteLine(sonuc);
 
+
+
+            // NOT (DEĞİL) !
+
+            //bool cevap = 5 > 3;
+
+            //Console.WriteLine(!cevap);
+
+
+            #endregion
+
+
+            #region Kıyas Operatörü
+
+            // Bir kıyaslama sonucu true ise ? kısmını, false ise : kısmını alır. 
+
+            //Kullanıcının yaşına bak 35 altında işe genç, değilse yaşlı yaz
+
+            //int yas = 44;
+
+            //string sonuc = yas < 35 ? "genç" : "yaşlı";
+
+            //Console.WriteLine("Son Durum:"+sonuc);
+
+
+
+
+            //string isim = "altan";
+
+            //double maas = isim == "altan" ? 5000000 : 1000000;
+
+            //Console.WriteLine("Maaşınız:"+maas);
+
+            #endregion
+
+
+            #region Erişim Operatörü .
+
+            // . operatörü ile bir tanımın içindeki(kapsadığı) özelliğine erişilir.
+
+            //Console.WriteLine();
+
+            //Console.ReadLine().ToLower();
 
 
 
