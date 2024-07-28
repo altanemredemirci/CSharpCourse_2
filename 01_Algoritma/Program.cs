@@ -141,7 +141,18 @@
              
              */
 
-           
+
+            //string ad = "altan";
+            //int yas = 34;
+
+            //Console.WriteLine("Yaş:"+yas);
+            //Console.WriteLine($"Yaş:{yas} Ad:{ad}");
+            //Console.WriteLine("Yaş:{0} Ad:{1}",yas,ad);
+
+            //Sabit Değişken
+            //const int pi = 3;
+            //pi = 5;
+            //Console.WriteLine(pi);
 
         }
     }
