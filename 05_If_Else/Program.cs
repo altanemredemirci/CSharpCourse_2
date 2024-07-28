@@ -523,8 +523,61 @@
 
             #endregion
 
-         
 
+            #region IF ELSE_7
+            /*
+             Kullanıcıdan isim, yaş, maaş ve çocuk sayısı alınsın.
+
+                Eğer kulanıcının yaşı 45'in altındaysa;
+                Çocuk sayısına bakılacak. Ve çocuk sayısı 3'ten az ise çocuk başına 2500₺,
+                                                          3'ten çok ise çocuk başına 2000₺ 
+                                                                maaşa ekleme yapılacak.
+                45'in üzerinde ise çocuk başına para verilmeyecek ancak 5000₺ ekleme yapılacak.
+                Son olarak ekrana : "Nesrin Yılmaz, Maaşınız: 40000₺" yazılacak. 
+             */
+
+            //Yiğit Ali
+            //Console.WriteLine("Adınız:");
+            //string ad = Console.ReadLine();
+            //Console.WriteLine("Yaşınız:");
+            //int yas = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Kaç çocuğunuz var:");
+            //int cocuksayisi = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Maaş:");
+            //int maas = Convert.ToInt32(Console.ReadLine());
+
+            //if (yas > 0 && yas < 45)
+            //{
+            //    if (cocuksayisi > 3)
+            //    {
+            //        maas = maas + (cocuksayisi * 2500);
+            //        Console.WriteLine("Sayın" + ad + "alacağınız maaş :", maas);
+            //    }
+            //    else
+            //    {
+            //        maas = maas + (cocuksayisi * 2000);
+            //        Console.WriteLine("Sayın" + ad + "alacağınız maaş :", maas);
+
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sayın" + ad + "alacağınız maaş :" + (maas + 5000));
+            //}
+
+
+
+            #endregion
+
+
+            #region ÖDEV
+
+            // Kullanıcıdan 3 adet sayı alınız ve bu sayıları şekil A görüldüğü gibi büyükten küçüğe sıralı bir şekilde ekrana yazdırınız
+            //Şekil a: 15>13>5
+
+
+
+            #endregion
 
 
         }

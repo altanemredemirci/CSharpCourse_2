@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Degisken_VeriTipleri", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Operatorler", "03_Operatorler\03_Operatorler.csproj", "{47826B0D-CF0C-4A3B-9020-6D92FD944E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_TurDonusumleri", "04_TurDonusumleri\04_TurDonusumleri.csproj", "{D0EAD6F4-27D9-402F-AEB1-B3468A283E98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_TurDonusumleri", "04_TurDonusumleri\04_TurDonusumleri.csproj", "{D0EAD6F4-27D9-402F-AEB1-B3468A283E98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_If_Else", "05_If_Else\05_If_Else.csproj", "{39C197FA-24F0-490F-9A99-BA1D0377035B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_If_Else", "05_If_Else\05_If_Else.csproj", "{39C197FA-24F0-490F-9A99-BA1D0377035B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Switch_Case", "06_Switch_Case\06_Switch_Case.csproj", "{82491C3C-E4DC-4291-B17E-1C2ABC45C55A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{39C197FA-24F0-490F-9A99-BA1D0377035B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C197FA-24F0-490F-9A99-BA1D0377035B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C197FA-24F0-490F-9A99-BA1D0377035B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82491C3C-E4DC-4291-B17E-1C2ABC45C55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82491C3C-E4DC-4291-B17E-1C2ABC45C55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82491C3C-E4DC-4291-B17E-1C2ABC45C55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82491C3C-E4DC-4291-B17E-1C2ABC45C55A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
