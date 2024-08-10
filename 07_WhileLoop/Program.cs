@@ -94,7 +94,85 @@
             // ** Kullanıcı ilk sayıyı 0 girerse tekrar sayı istensin
             // ** kullanıcı negatif sayı girerse "lütfen Pozitif Sayı Giriniz!!" uyarısını verilsin.
 
+            //int sayac = 0;
+            //int toplam = 0;
+            //while (true)
+            //{
+            //    Console.WriteLine("Bir sayı giriniz");
+            //    int sayi = Convert.ToInt32(Console.ReadLine());
+
+            //    if (sayi == 0 && sayac == 0)
+            //        continue;
+
+            //   if (sayi == 0)
+            //        break;
+
+            //    if (sayi < 0)
+            //    {
+            //        Console.WriteLine("Lütfen Pozitif Sayı Giriniz!!!");
+            //        continue;
+            //    }
+
+            //    toplam += sayi;
+            //    sayac++;
+            //}
+
+            //Console.WriteLine("Toplam:"+toplam);
+            //Console.WriteLine("Ortalama:"+(toplam/sayac));
+
+
+
             #endregion
+
+
+            #region Kullanıcıya kayıtlı username ve şifre giriş paneli için 3 hak veriniz ve 3 hak giriş yapamaz ise sistemi 10 saniye kitleyiniz. Kullanıcıya gerekli bütün uyarıları yapınız.
+
+            string username = "admin";
+            string password = "ab18";
+
+            int hak = 3;
+            while (hak > 0)
+            {
+                Console.WriteLine("Kullanıcı adınız:");
+                string kullaniciadi = Console.ReadLine();
+
+                Console.WriteLine("Şifreniz:");
+                string sifre = Console.ReadLine();
+
+                hak--;
+
+                if (kullaniciadi == username && sifre == password)
+                {
+                    Console.WriteLine("Giriş Başarılı");
+                    break;
+                }
+
+                else if (hak == 0)
+                {
+                    Console.WriteLine("Giriş Hakkınız Kalmadı...");
+                    Console.WriteLine("Sistem kilitlendi");
+                    Thread.Sleep(5000);
+                    Console.WriteLine("Sistem açıldı");
+                    hak = 3;
+                }
+
+                else
+                {
+                    Console.WriteLine("Giriş Başarısız!!");
+                    Console.WriteLine("Tekrar Deneyiniz.");
+                }
+
+
+            }
+
+
+            Console.WriteLine("Sistem kilitlendi");
+            Thread.Sleep(5000);
+            // Console.WriteLine("Sistem açıldı");
+            Environment.Exit(0);
+
+            #endregion
+
 
 
         }
