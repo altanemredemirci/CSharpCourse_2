@@ -114,46 +114,171 @@
 
             #region Ekrana kullanıcıdan alınan başlangıç ve bitiş değeri arasındaki 13'ün katları olan sayıların toplamını yazdırınız.Başlangıç değeri bitiş değerinden büyük girilirse değerler birbiri ile değiştirilsin
 
-            int sum = 0;
-            while (true)
-            {
-                Console.WriteLine("Başlangıç değeri:");//20
-                int basla = Convert.ToInt32(Console.ReadLine());
+            //int sum = 0;
+            //while (true)
+            //{
+            //    Console.WriteLine("Başlangıç değeri:");//20
+            //    int basla = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Bitiş değeri:");//10
-                int bitis = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("Bitiş değeri:");//10
+            //    int bitis = Convert.ToInt32(Console.ReadLine());
 
-                if (basla > bitis)
-                {
-                    Console.WriteLine("Başlangıç Değeri Bitiş Değerinden Küçük Olmalıdır!!");
-                    int deger = basla;
-                    basla = bitis; //basla=10; deger=20
-                    bitis = deger; //bitis=20
-                }
+            //    if (basla > bitis)
+            //    {
+            //        Console.WriteLine("Başlangıç Değeri Bitiş Değerinden Küçük Olmalıdır!!");
+            //        int deger = basla;
+            //        basla = bitis; //basla=10; deger=20
+            //        bitis = deger; //bitis=20
+            //    }
 
-                for (int i = basla; i < bitis; i++)
-                {
-                    //Koşul = Condition(if,switch)
-                    if (i % 13 == 0)
-                    {
-                        sum += i;
-                    }
+            //    for (int i = basla; i < bitis; i++)
+            //    {
+            //        //Koşul = Condition(if,switch)
+            //        if (i % 13 == 0)
+            //        {
+            //            sum += i;
+            //        }
 
-                }
-                break;
+            //    }
+            //    break;
 
 
-            }
+            //}
 
-            Console.WriteLine(sum);
+            //Console.WriteLine(sum);
+            #endregion
+            #region Kullanıcıdan alınan bir sayının faktörüyeli hesaplayan for döngüsünü yazınız.
+            // 5 => 1*2*3*4*5 =120
 
+            //Console.WriteLine("faktöriyel hesaplanacak sayı:");
+            //int sayi = Convert.ToInt32(Console.ReadLine());
+
+            //int fakt = 1;
+
+            //for (int i = 1; i <= sayi; i++)
+            //{
+            //    fakt *= i;
+            //}
+            //Console.WriteLine("Faktöriyel:"+fakt);
+            //Console.WriteLine("Faktöriyel:{0}",fakt);
+            //Console.WriteLine($"Faktöriyel:{fakt}");
+
+
+
+            #endregion
+
+            #region PASCAL ÜÇGENİ
+            /*
+             
+            *
+            **
+            ***
+            ****
+            *****
+            ******
+             
+             */
+
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    for (int j = 0; j <i ; j++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+
+            #endregion
+
+            #region KARE
+            /*
+             
+            *********
+            *       *
+            *       *
+            *       *
+            *       *
+            *       *
+            *********
+               
+             */
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    if(i==1 || i == 9)
+            //    {
+            //        Console.WriteLine("*********");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("*       *");
+            //    }
+            //}
 
 
 
 
             #endregion
 
+            #region KARE
+            /*
+             
+                    *
+                   ***
+                  *****
+                 *******
+                *********
+               ***********
+              
+             */
 
+            //int sayac = 1;
+            //int bosluk = 10;
+
+            //for (int i = 1; i < 10; i++)
+            //{
+            //    for (int j = 0; j < bosluk; j++)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    bosluk--;
+
+            //    for (int k = 0; k < sayac; k++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    sayac += 2;
+            //    Console.WriteLine();
+
+            //}
+
+
+
+
+            #endregion
+
+            #region ÇARPIM TABLOSU
+
+            /*
+             1*1=1  2*1=2 3*1=3
+             1*2=2  2
+             
+             */
+
+
+
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    for (int j = 1; j < 10; j++)
+            //    {
+            //        Console.Write($"{j}x{i}={i*j}\t");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+            #endregion
 
 
 
