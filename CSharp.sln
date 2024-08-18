@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Random", "07_Random\07_R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_DoWhileLoop", "07_DoWhileLoop\07_DoWhileLoop.csproj", "{24E56A1D-C4DB-4C48-9D85-1FF1CA26B578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_Try_Catch", "08_Try_Catch\08_Try_Catch.csproj", "{5CCAEEE0-6177-4A72-A2B1-DB80B7CB63A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Try_Catch", "08_Try_Catch\08_Try_Catch.csproj", "{5CCAEEE0-6177-4A72-A2B1-DB80B7CB63A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_Arrays", "10_Arrays\10_Arrays.csproj", "{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_Arrays", "10_Arrays\10_Arrays.csproj", "{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_OtomatMakinesi", "11_OtomatMakinesi\11_OtomatMakinesi.csproj", "{ACC7E032-17C5-443D-8734-24BDA77928E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
