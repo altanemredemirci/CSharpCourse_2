@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_Try_Catch", "08_Try_Catc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_Arrays", "10_Arrays\10_Arrays.csproj", "{D8EB2E5E-677F-4C93-B380-F59E1ABEBD8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_OtomatMakinesi", "11_OtomatMakinesi\11_OtomatMakinesi.csproj", "{ACC7E032-17C5-443D-8734-24BDA77928E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_OtomatMakinesi", "11_OtomatMakinesi\11_OtomatMakinesi.csproj", "{ACC7E032-17C5-443D-8734-24BDA77928E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods", "12_Methods\12_Methods.csproj", "{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACC7E032-17C5-443D-8734-24BDA77928E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
