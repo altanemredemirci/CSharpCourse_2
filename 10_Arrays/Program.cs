@@ -314,6 +314,53 @@
             //Aynı sayılar tekrar atanmayacak
             //Dizideki en büyük ve en küçük sayılar sort() kullanılmadan bulup ekrana yazdırılacak 
 
+            Random r = new Random();
+
+            int[] dizi = new int[r.Next(10, 20)]; //19
+
+            int i = 0;
+           while(i<dizi.Length)
+            {
+                int sayi = r.Next(0, 20);
+
+                bool varMi = false;
+
+                foreach (var item in dizi)
+                {
+                    if (item == sayi)
+                    {
+                        varMi = true;
+                        break;
+                    }
+                }
+                if (varMi == false)
+                {
+                    dizi[i] = sayi;
+                    i++;
+                }
+
+            }
+
+            foreach (int item in dizi)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("*********************");
+
+            int enBuyuk = dizi[0];
+            int enKucuk = dizi[0];
+            foreach (int item in dizi)
+            {
+                if (item > enBuyuk)
+                    enBuyuk = item;
+
+                if (item < enKucuk)
+                    enKucuk = item;
+            }
+
+            Console.WriteLine("En Büyük Sayı:"+enBuyuk);
+            Console.WriteLine("En Küçük Sayı:"+enKucuk);
+
             #endregion
 
         }
