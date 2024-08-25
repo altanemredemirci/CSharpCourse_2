@@ -1,4 +1,6 @@
-﻿using System.Diagnostics.Metrics;
+﻿
+using _12_Methods_1;
+using System.Diagnostics.Metrics;
 using System.Reflection.Metadata;
 
 namespace _12_Methods
@@ -15,7 +17,7 @@ namespace _12_Methods
             Metotlar ve Fonksiyonlar () ile tanımlanır.
             Metotlar iç içe TANIMLANAMAZLAR.
             Metotlar çağrılmadığı sürece bir işlem yapmazlar.
-            Metot isimleri UNIQUE(benzersiz) olmalıdır.
+            Metotlar UNIQUE(benzersiz) olmalıdır. Aynı isme sahip metotların, metot imzaları farklı olmalıdır.(parametre sayısı,parametre veri tipi)
 
             Fonksiyonlar ise yazılımcının kendisinin oluşturduğu metotlardır.
 
@@ -27,25 +29,26 @@ namespace _12_Methods
 
             Parametre: metot parantezleri içerisine yazılan ve metodu kullanırken gönderilecek verilerdir. 
             
-            
-
+                
              */
 
             //Yaz();
             //YazIsim("Altan Emre");
 
             //Metot tanımlanırken verilen parametre ismi ile metodu çağırırken gönderilen parametre ismi AYNI OLMAK ZORUNDA DEĞİLDİR.
-            string isim = "Altan Emre";
-            //YazIsim(isim);
+            //string isim = "Altan Emre";
+            ////YazIsim(isim);
 
-            int sayi1 = 12;
-            double sayi2 = 15.5;
+            //int sayi1 = 12;
+            //double sayi2 = 15.5;
 
-            int sayi3 = (int)sayi2;
-            Console.WriteLine(sayi3);
+            //int sayi3 = (int)sayi2;
+            //Console.WriteLine(sayi3);
 
-            Topla(sayi1, sayi2);
 
+            //Topla(sayi1, sayi2);
+
+            DortIslem.Toplama();
 
         }
 
@@ -61,8 +64,10 @@ namespace _12_Methods
 
         //Metot çağrılırken tanımında olan parametre sayısını ve parametre veritipini aynı sıra ile karşılamalıdır.
         static void Topla(int s1,double s2)
-        {
+        {           
             Console.WriteLine(s1+s2);
         }
     }
+
+  
 }

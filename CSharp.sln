@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_Arrays", "10_Arrays\10_A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_OtomatMakinesi", "11_OtomatMakinesi\11_OtomatMakinesi.csproj", "{ACC7E032-17C5-443D-8734-24BDA77928E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods", "12_Methods\12_Methods.csproj", "{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods", "12_Methods\12_Methods.csproj", "{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_1", "12_Methods_1\12_Methods_1.csproj", "{37805A72-46AA-431A-9A09-BFBBB313BA54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A26B8A94-EDCA-42D5-B146-6FADBEB4F879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37805A72-46AA-431A-9A09-BFBBB313BA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37805A72-46AA-431A-9A09-BFBBB313BA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37805A72-46AA-431A-9A09-BFBBB313BA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37805A72-46AA-431A-9A09-BFBBB313BA54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
