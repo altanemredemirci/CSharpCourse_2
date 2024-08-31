@@ -107,6 +107,7 @@
 
     class Matematik
     {
+        //DataAccessModifier(Erişim Belirteci): public,internal,protected,private
         internal static void Yaz()
         {
             Console.WriteLine("Hello World");
