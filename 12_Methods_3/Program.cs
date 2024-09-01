@@ -12,8 +12,10 @@
 
 
             Matematik.Topla();
-            Matematik.Topla(11,12);
-            Matematik.Topla();
+            Matematik.Topla(11,12,13);
+            Matematik.Topla(1,2);
+            Matematik.Topla(1,2,3);
+            Matematik.Topla(1,2,3,4);
 
         }
     }

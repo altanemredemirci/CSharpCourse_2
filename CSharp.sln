@@ -35,17 +35,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods", "12_Methods\12
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_1", "12_Methods_1\12_Methods_1.csproj", "{37805A72-46AA-431A-9A09-BFBBB313BA54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_2", "12_Metot_2\12_Methods_2.csproj", "{6ABCC272-BC6A-4F0B-ABA7-DEEC2F525A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_2", "12_Metot_2\12_Methods_2.csproj", "{6ABCC272-BC6A-4F0B-ABA7-DEEC2F525A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_3", "12_Methods_3\12_Methods_3.csproj", "{7CAE96F9-61F3-49CC-9D4D-E66876BABF63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_3", "12_Methods_3\12_Methods_3.csproj", "{7CAE96F9-61F3-49CC-9D4D-E66876BABF63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_4", "12_Methods_4\12_Methods_4.csproj", "{F8DF9976-BDED-4823-AE13-DFF5257F8CC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_4", "12_Methods_4\12_Methods_4.csproj", "{F8DF9976-BDED-4823-AE13-DFF5257F8CC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_5", "12_Methods_5\12_Methods_5.csproj", "{4E8546C5-33CC-4B68-827F-58FC4A86F710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_5", "12_Methods_5\12_Methods_5.csproj", "{4E8546C5-33CC-4B68-827F-58FC4A86F710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_6", "12_Methods_6\12_Methods_6.csproj", "{CF495A5D-524C-4623-9DD2-AC85AB292540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_6", "12_Methods_6\12_Methods_6.csproj", "{CF495A5D-524C-4623-9DD2-AC85AB292540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_7", "12_Methods_7\12_Methods_7.csproj", "{46D994A3-1045-4F2B-91FF-96D8446D2116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Methods_7", "12_Methods_7\12_Methods_7.csproj", "{46D994A3-1045-4F2B-91FF-96D8446D2116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_8", "12_Methods_8\12_Methods_8.csproj", "{EB71F790-4E5F-4957-B0CC-108CC15056D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Methods_9", "12_Methods_9\12_Methods_9.csproj", "{1AC320E8-CAA4-4690-8B8F-5789D59622B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +145,14 @@ Global
 		{46D994A3-1045-4F2B-91FF-96D8446D2116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46D994A3-1045-4F2B-91FF-96D8446D2116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46D994A3-1045-4F2B-91FF-96D8446D2116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB71F790-4E5F-4957-B0CC-108CC15056D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB71F790-4E5F-4957-B0CC-108CC15056D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB71F790-4E5F-4957-B0CC-108CC15056D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB71F790-4E5F-4957-B0CC-108CC15056D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC320E8-CAA4-4690-8B8F-5789D59622B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC320E8-CAA4-4690-8B8F-5789D59622B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC320E8-CAA4-4690-8B8F-5789D59622B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC320E8-CAA4-4690-8B8F-5789D59622B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

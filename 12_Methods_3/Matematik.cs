@@ -32,5 +32,10 @@ namespace _12_Methods_3
         {
             Console.WriteLine("Toplam:" + (s1 + s2 + s3));
         }
+
+        internal static void Topla(int s1, int s2, int s3, int s4)
+        {
+            Console.WriteLine("Toplam:" + (s1 + s2 + s3 + s4));
+        }
     }
 }
