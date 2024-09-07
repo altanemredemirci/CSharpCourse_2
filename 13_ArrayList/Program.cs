@@ -59,8 +59,8 @@ namespace _13_ArrayList
 
             #region ArrayList Methods
 
-            ArrayList sayilar = new ArrayList() { 1,2,3};
-            sayilar.Add(4);
+            //ArrayList sayilar = new ArrayList() { 1,2,3};
+            //sayilar.Add(4);
 
 
             //Çoklu veri ekleme
@@ -86,24 +86,52 @@ namespace _13_ArrayList
             //Koleksiyon içinde değerleri index değerine göre ters sıralar.
             //sayilar.Reverse();
             //sayilar.Reverse(1,2);
-             
 
 
-            ArrayList sayilar2 = new ArrayList();
-            sayilar2 = (ArrayList) sayilar.Clone(); //Boxing
+            //Koleksiyondan eleman silme
+            //ArrayList sehirler = new ArrayList() { "İstanbul", "Adana", "Mersin", "Hatay", "İzmir" };
 
-            sayilar.Add(5);
+            //sehirler.Remove("Adana"); //değer üzerinden siler.
+            //sehirler.RemoveAt(2); // index değeri üzerinden siler.
 
 
-            foreach (var item in sayilar)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine("***********");
-            foreach (var item in sayilar2)
-            {
-                Console.WriteLine(item);
-            }
+            //sehirler.RemoveRange(1, 2); // index,silinecekElemanSayısı
+
+
+
+            //IndexOF:Koleksiyon içerisinde istenilen elemanın ILK INDEX NUMARASINI döndürür.
+            //ArrayList sehirler = new ArrayList() { "İstanbul", "Adana", "Mersin", "Hatay", "İzmir" };
+
+            //Console.WriteLine(sehirler.IndexOf("Adana"));
+
+
+            //LastIndexOF:Koleksiyon içerisinde istenilen elemanın SON INDEX NUMARASINI döndürür.
+            //ArrayList sehirler = new ArrayList() { "İstanbul", "Adana", "Mersin", "Hatay", "Adana", "İzmir", "Adana" };
+
+            //int index = sehirler.LastIndexOf("Adana");
+            //int indexx = sehirler.LastIndexOf("Adana",3); // 3. indexten geriye doğru arar.
+            //Console.WriteLine(index);
+
+
+            //int index2 = sehirler.IndexOf("Adana", 2);
+            //Console.WriteLine(index2);
+
+
+            //ArrayList sayilar2 = new ArrayList();
+            //sayilar2 = (ArrayList) sayilar.Clone(); //Boxing
+
+            //sayilar.Add(5);
+
+
+            //foreach (var item in sayilar)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("***********");
+            //foreach (var item in sayilar2)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
         }
     }
