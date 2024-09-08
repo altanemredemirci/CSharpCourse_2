@@ -72,80 +72,87 @@ namespace _15_SortedList_QueueList
              */
             #endregion
 
-            SortedList sozluk = new SortedList()
+            //SortedList sozluk = new SortedList()
+            //{
+            //    { "siyah","black" },
+            //    { "beyaz","white" }
+            //};
+
+            //while (true)
+            //{
+            //    Console.WriteLine("1-Arama\n2-Çıkarma\n3-Listeleme\n4-Çıkış\nSeçiminiz:");
+            //    int secim = Convert.ToInt32(Console.ReadLine());
+
+            //    if (secim == 1) 
+            //    {
+            //        Console.WriteLine("Aranacak Kelime:");
+            //        string kelime = Console.ReadLine();
+
+            //        if (sozluk.Contains(kelime))
+            //        {
+            //            Console.WriteLine(sozluk[kelime]);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Kelime bulunamadı. Sözlüğü geliştirmek ister misiniz?(E/H)");
+            //            string cevap = Console.ReadLine().ToUpper();
+
+            //            if (cevap == "E")
+            //            {
+            //                Console.WriteLine("Kelimenin ingilizcesini gir");
+            //                string word = Console.ReadLine();
+
+            //                sozluk[kelime] = word;
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Peki...");
+            //            }
+
+            //        }
+
+            //    }
+            //    else if (secim == 2) 
+            //    {
+            //        Console.WriteLine("Çıkarılacak Kelime:");
+            //        string kelime = Console.ReadLine();
+
+            //        if (sozluk.Contains(kelime))
+            //        {
+            //            sozluk.Remove(kelime);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Kelime zaten yok!!!");
+            //        }
+
+            //    }
+            //    else if (secim == 3) 
+            //    {
+            //        foreach (DictionaryEntry item in sozluk)
+            //        {
+            //            Console.WriteLine(item.Key+":"+item.Value);
+            //        }
+            //    }
+            //    else if (secim == 4) 
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Hatalı Tuşlama");
+            //    }
+
+            //}
+
+            // Hashtable, Queue, Dictionary, Stack
+
+            Dictionary<string, string> sozluk = new Dictionary<string, string>()
             {
-                { "siyah","black" },
-                { "beyaz","white" }
+                {"mavi","blue" }
             };
 
-            while (true)
-            {
-                Console.WriteLine("1-Arama\n2-Çıkarma\n3-Listeleme\n4-Çıkış\nSeçiminiz:");
-                int secim = Convert.ToInt32(Console.ReadLine());
-
-                if (secim == 1) 
-                {
-                    Console.WriteLine("Aranacak Kelime:");
-                    string kelime = Console.ReadLine();
-
-                    if (sozluk.Contains(kelime))
-                    {
-                        Console.WriteLine(sozluk[kelime]);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Kelime bulunamadı. Sözlüğü geliştirmek ister misiniz?(E/H)");
-                        string cevap = Console.ReadLine().ToUpper();
-
-                        if (cevap == "E")
-                        {
-                            Console.WriteLine("Kelimenin ingilizcesini gir");
-                            string word = Console.ReadLine();
-
-                            sozluk[kelime] = word;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Peki...");
-                        }
-
-                    }
-
-                }
-                else if (secim == 2) 
-                {
-                    Console.WriteLine("Çıkarılacak Kelime:");
-                    string kelime = Console.ReadLine();
-
-                    if (sozluk.Contains(kelime))
-                    {
-                        sozluk.Remove(kelime);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Kelime zaten yok!!!");
-                    }
-
-                }
-                else if (secim == 3) 
-                {
-                    foreach (DictionaryEntry item in sozluk)
-                    {
-                        Console.WriteLine(item.Key+":"+item.Value);
-                    }
-                }
-                else if (secim == 4) 
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Hatalı Tuşlama");
-                }
-
-            }
-         
-
+            sozluk.Add("kırmızı", "red");
 
 
 
