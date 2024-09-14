@@ -78,7 +78,34 @@
 
 
             //Static User Döndüren Metot
-            users.Add(User.CreateUser3());
+
+            //var kullanici = User.CreateUser3();
+
+            //users.Add(kullanici);
+
+            //users.Add(User.CreateUser3());
+
+
+
+
+
+            User u4 = new User()
+            {
+                username = "ahmet132123",
+                password = "asd1",
+                name = "Ahmet",
+                surname = "Yıldız",
+                email = "ahmetyildiz11199292@hotmail.com"
+            };
+
+
+
+            List<User> kullanicilar = new List<User>()
+            {
+                new User{username = "ahmet132123",password = "asd1",name = "Ahmet",surname = "Yıldız",email = "ahmetyildiz11199292@hotmail.com"},
+                new User{username = "ahmet132123",password = "asd1",name = "Ahmet",surname = "Yıldız",email = "ahmetyildiz11199292@hotmail.com"},
+                new User{username = "ahmet132123",password = "asd1",name = "Ahmet",surname = "Yıldız",email = "ahmetyildiz11199292@hotmail.com"}
+            };
         }
 
        

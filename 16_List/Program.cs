@@ -49,12 +49,7 @@
             foreach (string item in ogrenciler)
             {
                 Console.WriteLine(item);
-            }
-            // Object Foreach
-            //ogrenciler.ForEach();
-
-
-            
+            }  
 
         }
     }
