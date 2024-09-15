@@ -18,10 +18,7 @@
             Yemek seçimi sonrası başka bir arzunuz var mı diye sorulacak.
             Evet -> Tekrar menü yazdır ve yemek siparişi al
             Hayır -> 1.masa 2. müşteri için aynı işlemleri yap
-            Masadaki herkesin siparişi alındıysa tekrar ana menüye dön 
-            
-
-
+            Masadaki herkesin siparişi alındıysa tekrar ana menüye dön   
              */
         }
     }
