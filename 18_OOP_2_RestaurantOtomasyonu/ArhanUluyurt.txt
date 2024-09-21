@@ -1,0 +1,206 @@
+﻿ internal class ArhanProject
+    {
+        
+        static Menu restoranMenu = new Menu();
+        static List<Masa> masalar = new List<Masa>();
+
+        static void Main(string[] args)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                masalar.Add(new Masa(i));
+            }
+
+            while (true)
+            {
+                Console.WriteLine("**** Ana Menü ****\n1 - Sipariş al\n2 - Hesap al\n3 - Menü düzenle\n4 - Çıkış");
+
+                try
+                {
+                    int secim = Convert.ToInt32(Console.ReadLine());
+
+                    if (secim == 1) { SiparisAl(); }
+                    else if (secim == 2) { HesapAl(); }
+                    else if (secim == 3) { Console.Clear(); MenuDuzenle(restoranMenu); }
+                    else if (secim == 4) { break; }
+                    else
+                    {
+                        Console.WriteLine("Hatalı tuşlama, geçerli bir rakam giriniz.");
+                        Thread.Sleep(2000);
+                        Console.Clear();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Hatalı tuşlama, sadece rakam kullanınız.");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                }
+            }
+        }
+
+        static void SiparisAl()
+        {
+            Masa bosMasa = masalar.Find(m => !m.DoluMu);
+            if (bosMasa == null)
+            {
+                Console.WriteLine("Tüm masalar dolu.");
+                return;
+            }
+
+            bosMasa.DoluMu = true;
+            Console.WriteLine($"{bosMasa.MasaNo}. masa doldu. Kaç kişisiniz?");
+            int kisiSayisi = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < kisiSayisi; i++)
+            {
+                Console.WriteLine($"{i + 1}. müşteri için sipariş alınıyor.");
+                SiparisAlindi(bosMasa);
+            }
+        }
+
+        static void SiparisAlindi(Masa masa)
+        {
+            string devam = "evet";
+            while (devam.ToLower() == "evet")
+            {
+                restoranMenu.MenuYazdir();
+                Console.WriteLine("Lütfen bir yemek seçin:");
+                string secilenYemek = Console.ReadLine();
+                masa.SiparisEkle(secilenYemek);
+                Console.WriteLine("Başka bir arzunuz var mı? (evet/hayır)");
+                devam = Console.ReadLine();
+            }
+        }
+
+        static void HesapAl()
+        {
+            Console.WriteLine("Hangi masanın hesabı alınacak?");
+            int masaNumarasi = Convert.ToInt32(Console.ReadLine());
+
+            Masa masa = masalar.Find(m => m.MasaNo == masaNumarasi);
+            if (masa != null && masa.DoluMu)
+            {
+                masa.SiparisleriGoster();
+                Console.WriteLine("Hesap alındı.");
+                masa.MasayiSifirla();
+            }
+            else
+            {
+                Console.WriteLine("Geçersiz masa veya masa boş.");
+            }
+        }
+
+        static void MenuDuzenle(Menu restoranMenu)
+        {
+            while (true)
+            {
+                Console.WriteLine("*** Menü Düzenleme ***");
+                Console.WriteLine("1 - Menüye Yemek Ekle");
+                Console.WriteLine("2 - Menüden Yemek Çıkar");
+                Console.WriteLine("3 - Menüyü Görüntüle");
+                Console.WriteLine("4 - Ana Menüye Dön");
+
+                int secim = Convert.ToInt32(Console.ReadLine());
+
+                if (secim == 1)
+                {
+                    Console.WriteLine("Eklemek istediğiniz yemeği girin:");
+                    string yemek = Console.ReadLine();
+                    restoranMenu.MenuEkle(yemek);
+                }
+                else if (secim == 2)
+                {
+                    Console.WriteLine("Çıkarmak istediğiniz yemeği girin:");
+                    string yemek = Console.ReadLine();
+                    restoranMenu.MenuCikart(yemek);
+                }
+                else if (secim == 3)
+                {
+                    Console.Clear();
+                    restoranMenu.MenuYazdir();
+                }
+                else if (secim == 4)
+                {
+                    Console.Clear();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Hatalı giriş, lütfen tekrar deneyin.");
+                }
+            }
+        }
+    }
+
+    class Masa
+    {
+        public bool DoluMu { get; set; } = false;
+        public List<string> Siparisler { get; set; } = new List<string>();
+        public int MasaNo { get; private set; }
+
+        public Masa(int masaNo)
+        {
+            this.MasaNo = masaNo;
+        }
+
+        public void SiparisEkle(string siparis)
+        {
+            Siparisler.Add(siparis);
+        }
+
+        public void SiparisleriGoster()
+        {
+            Console.WriteLine($"{MasaNo}. Masa Siparişleri:");
+            foreach (var siparis in Siparisler)
+            {
+                Console.WriteLine($"- {siparis}");
+            }
+        }
+
+        public void MasayiSifirla()
+        {
+            DoluMu = false;
+            Siparisler.Clear();
+        }
+    }
+
+    class Menu
+    {
+        private List<string> yemekListesi = new List<string>();
+
+        public Menu()
+        {
+            yemekListesi.Add("makarna");
+            yemekListesi.Add("pizza");
+            yemekListesi.Add("salata");
+        }
+
+        public void MenuYazdir()
+        {
+            Console.WriteLine("Mevcut Menü:");
+            foreach (string yemek in yemekListesi)
+            {
+                Console.WriteLine($"- {yemek}");
+            }
+        }
+
+        public void MenuEkle(string yemek)
+        {
+            yemekListesi.Add(yemek);
+            Console.WriteLine($"{yemek} menüye eklendi.");
+        }
+
+        public void MenuCikart(string yemek)
+        {
+            if (yemekListesi.Contains(yemek))
+            {
+                yemekListesi.Remove(yemek);
+                Console.WriteLine($"{yemek} menüden çıkarıldı.");
+            }
+            else
+            {
+                Console.WriteLine($"{yemek} menüde bulunamadı.");
+            }
+        }  
+    }

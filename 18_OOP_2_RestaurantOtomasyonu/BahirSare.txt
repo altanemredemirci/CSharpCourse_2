@@ -1,0 +1,519 @@
+﻿namespace RestaurantOtomasyonu
+{//menu oluşturulması düzenlenmesi ile ilgili methodlar için
+    internal class Menu
+    {
+        internal static List<Menu> MainCourse = new List<Menu>();
+        internal static List<Menu> Beverages = new List<Menu>();
+        internal static List<Menu> Desserts = new List<Menu>();
+        internal static List<Menu> WholeMenu = new List<Menu>();
+        internal int Id;
+        internal string Type;//ürün tipi (yiyecek, içecek, tatlı vb.)
+        internal string Name;
+        internal double Price;
+
+        public Menu() { }
+        public Menu(string type, string name, double price)
+        {
+            this.Id = WholeMenu.Count;
+            this.Type = type;
+            this.Name = name;
+            this.Price = price;
+            AddItemtoMenu(this);
+        }
+        void ListMenu(List<Menu> list)
+        {
+            if (list.Count == 0) return;
+
+            foreach (Menu item in list)
+            {
+                Console.WriteLine($"ID: {item.Id} Ürün Adı: {item.Name} Fiyatı: {item.Price}");
+            }
+        }
+        /// <summary>
+        /// Writes lists by using Turkish equivalents of it.
+        /// </summary>
+        /// <param name="listName">Turkish equivalent of the list to be written </param>
+        internal void ListMenu(string listName)
+        {
+            if (listName == "yiyecek")
+            {
+                if (MainCourse.Count == 0) return;
+                Console.WriteLine("***Yiyecekler***");
+                ListMenu(MainCourse);
+            }
+            else if (listName == "icecek")
+            {
+                if (Beverages.Count == 0) return;
+                Console.WriteLine("***İçececekler***");
+                ListMenu(Beverages);
+            }
+            else if (listName == "tatli")
+            {
+                if (Desserts.Count == 0) return;
+                Console.WriteLine("***Tatlılar***");
+                ListMenu(Desserts);
+            }
+            else
+            {
+                Console.WriteLine("Geçersiz Menü İsmi!");
+            }
+        }
+        internal void ListMenu()
+        {
+            ListMenu("yiyecek");
+            ListMenu("icecek");
+            ListMenu("tatli");
+        }
+        internal void UpdateMenu()
+        {
+            ListMenu();
+            Console.WriteLine("Lütfen güncellemek istediğiniz ürünün ID değerini giriniz:");
+            if (int.TryParse(Console.ReadLine(), out int id))
+            {
+                bool isFound = false;
+                foreach (Menu item in WholeMenu)
+                {
+                    if (item.Id == id)
+                    {
+                        isFound = true;
+                        Console.WriteLine($"ID: {item.Id} Ürün Tipi: {item.Type} Ürün Adı: {item.Name} Fiyatı: {item.Price}");
+                        Console.WriteLine("Yeni ürün adı giriniz(Değiştirmek istemiyorsanız 'Enter' tuşuna basınız.):");
+                        string newName = Console.ReadLine();
+                        if (newName.Length != 0)
+                            item.Name = newName;
+                        Console.WriteLine("Yeni ürün fiyatı giriniz(Değiştirmek istemiyorsanız 'Enter' tuşuna basınız.):");
+                        if (double.TryParse(Console.ReadLine(), out double newPrice))
+                        {
+                            item.Price = newPrice;
+                            break;
+                        }
+                    }
+                }
+                if (isFound)
+                {
+                    Console.WriteLine("Geçersiz ID!!!");
+                }
+            }
+        }
+        /// <summary>
+        /// Creates items based on the user's responses and adds to relevant list.
+        /// </summary>
+        internal void AddItemtoMenu()
+        {
+            while (true)
+            {
+                Console.Clear();
+                this.Id = WholeMenu.Count + 1;
+                Console.WriteLine("Ürün Tipi Giriniz(yiyecek, icecek, tatli):");
+                this.Type = Console.ReadLine().ToLower();
+
+                if (!(Type == "yiyecek" || Type == "icecek" || Type == "tatli"))
+                {
+                    Console.WriteLine("Ürün Tipi Yanlış Girildi!!");
+                    Thread.Sleep(1000);
+                    continue;
+                }
+                else
+                {
+                    ListMenu(this.Type);
+                }
+                Console.WriteLine("Ürün Adını Giriniz:");
+                this.Name = Console.ReadLine();
+                bool nameControl = false;
+                foreach (Menu item in WholeMenu)
+                {
+                    if (item.Name.Contains(this.Name))
+                    {
+                        Console.WriteLine("Bu isimde ürün zaten var!!");
+                        nameControl = true;
+                    }
+                }
+                if (nameControl) continue;
+                Console.WriteLine("Ürün Fiyatını Giriniz:");
+                if (double.TryParse(Console.ReadLine(), out this.Price))
+                {
+                    if (this.Price > 0)
+                    {
+                        AddingItemMethod();
+                        Console.WriteLine("Ürün Eklendi!");
+                        ListMenu(this.Type);
+                        Thread.Sleep(1000);
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Fiyat Sıfırdan büyük olmalı!");
+                        continue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Fiyat sadece rakamlardan oluşmalı!");
+                    Thread.Sleep(1000);
+                    continue;
+                }
+            }
+        }
+        /// <summary>
+        /// Allows creating object with the constructor method.
+        /// </summary>
+        /// <param name="menu"></param>
+        internal void AddItemtoMenu(Menu menu)
+        {
+            this.Id = WholeMenu.Count + 1;
+            if (!(Type == "yiyecek" || Type == "icecek" || Type == "tatli"))
+            {
+                return;
+            }
+            bool nameControl = false;
+            foreach (Menu item in WholeMenu)
+            {
+                if (item.Name.Contains(this.Name))
+                {
+                    nameControl = true;
+                }
+            }
+            if (nameControl) return;
+            if (this.Price > 0)
+            {
+                AddingItemMethod();
+            }
+            else
+            {
+                return;
+            }
+        }
+        void AddingItemMethod()
+        {
+            if (this.Type == "yiyecek")
+            {
+                WholeMenu.Add(this);
+                MainCourse.Add(this);
+            }
+            else if (this.Type == "icecek")
+            {
+                WholeMenu.Add(this);
+                Beverages.Add(this);
+            }
+            else if (this.Type == "tatli")
+            {
+                WholeMenu.Add(this);
+                Desserts.Add(this);
+            }
+            else
+            {
+                Console.WriteLine("Hatalı giriş!");
+                Thread.Sleep(1000);
+            }
+        }
+        internal void RemovefromMenu()
+        {
+            ListMenu("yiyecek");
+            ListMenu("icecek");
+            ListMenu("tatli");
+            Console.WriteLine("Lütfen silmek istediğiniz ürünün ID değerini giriniz:");
+            if (int.TryParse(Console.ReadLine(), out int id))
+            {
+                bool isFound = false;
+                foreach (Menu item in WholeMenu)
+                {
+                    if (item.Id == id)
+                    {
+                        isFound = true;
+                        if (MainCourse.Contains(item))
+                            MainCourse.Remove(item);
+                        else if (Beverages.Contains(item))
+                            Beverages.Remove(item);
+                        else if (Desserts.Contains(item))
+                            Desserts.Remove(item);
+                    }
+                }
+                if (isFound)
+                {
+                    WholeMenu.RemoveAt(id - 1);
+                    Console.WriteLine("Ürün Silindi.");
+                    ListMenu("yiyecek");
+                    ListMenu("icecek");
+                    ListMenu("tatli");
+                }
+                else
+                {
+                    Console.WriteLine("Geçersiz ID!!");
+                }
+            }
+        }
+    }
+    internal class Order
+    {
+        public int Id;
+        public string Name;
+        public double Price;
+        public int TableId;
+        public int quantity;
+
+        public Order(int id, string name, int tableId, double price)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.TableId = tableId;
+            this.Price = price;
+            this.quantity = 1;
+        }
+
+    }
+
+}
+
+
+namespace RestaurantOtomasyonu
+{
+    internal class Table
+    {
+        int TableId;
+        int ClientCount;
+        bool IsOccupied;
+        List<Order> Orders = new List<Order>();
+        static List<Table> Tables = new List<Table>();
+        public Table(int ClientCount)
+        {
+            this.ClientCount = ClientCount;
+            this.IsOccupied = true;
+            this.TableId = Tables.Count + 1;
+            Tables.Add(this);
+        }
+        public Table()
+        {
+            this.TableId = Tables.Count + 1;
+            this.ClientCount = 0;
+            this.IsOccupied = false;
+            Tables.Add(this);
+        }
+        internal void TakeOrder()
+        {
+            Table selectedTable = SelectTable();
+            if (selectedTable != null)
+            {
+                Console.WriteLine($"Hoşgeldiniz, Masa {selectedTable.TableId} geçebilirsiniz.\nKaç kişi olacaksınız?");
+                if (int.TryParse(Console.ReadLine(), out int clientCount) && clientCount > 0)
+                {
+                    selectedTable.IsOccupied = true;
+                    for (int i = 0; i < clientCount; i++)
+                    {
+                        Console.Clear();
+                        Menu menu = new Menu();
+                        menu.ListMenu();
+                        while (true)
+                        {
+                            Console.WriteLine("Siparişinizi ID olarak giriniz:");
+                            if (int.TryParse(Console.ReadLine(), out int id))
+                            {
+                                bool itemFound = false;
+                                foreach (Menu item in Menu.WholeMenu)
+                                {
+                                    if (item.Id == id)
+                                    {
+                                        SaveOrder(item, selectedTable);
+                                        itemFound = true;
+                                        Thread.Sleep(1000);
+                                        break;
+                                    }
+                                }
+                                if (!itemFound)
+                                {
+                                    Console.WriteLine("Geçersiz ID. Lütfen tekrar deneyin.");
+                                }
+                                Console.WriteLine("Başka bir isteğiniz var mı? (E/H)");
+                                string answer = Console.ReadLine().ToUpper();
+                                if (answer != "E")
+                                {
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("ID değeri yalnızca sayı olabilir.");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Geçersiz Giriş! Lütfen 1 veya daha büyük bir sayı girin.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Boş masa bulunamadı.");
+            }
+        }
+        internal Table SelectTable()
+        {
+            foreach (Table table in Tables)
+            {
+                if (table.IsOccupied == false)
+                {
+                    return table;
+                }
+            }
+            return null;
+        }
+        internal Table SelectTable(int id)
+        {
+            foreach (Table table in Tables)
+            {
+                if (table.TableId == id)
+                {
+                    return table;
+                }
+            }
+            return null;
+        }
+        void ListOrders()
+        {
+            foreach (Order item in Orders)
+            {
+                Console.WriteLine($"Ürün Adı: {item.Name} Fiyatı: {item.Price} Adet:{item.quantity}");
+            }
+        }
+        void ListOrders(int tableId)
+        {
+            foreach (Order item in Orders)
+            {
+                if (item.TableId == tableId)
+                    Console.WriteLine($"Ürün Adı: {item.Name} Fiyatı: {item.Price} Masa Numarası: {tableId} Adet:{item.quantity}");
+            }
+        }
+        void SaveOrder(Menu item, Table selectedTable)
+        {
+            foreach (Order order1 in Orders)
+            {
+                if (order1.Name == item.Name)
+                {
+                    order1.quantity++;
+                    Console.WriteLine("Sipariş alındı.");
+                    ListOrders(selectedTable.TableId);
+                    return;
+                }
+            }
+            Order order = new Order(item.Id, item.Name, selectedTable.TableId, item.Price);
+            Orders.Add(order);
+            Console.WriteLine("Sipariş alındı.");
+            ListOrders(selectedTable.TableId);
+
+        }
+        internal void GenerateBill()
+        {
+            Console.WriteLine("Hesap Almak İstediğiniz Masa idsini Giriniz.");
+            double bill = 0;
+            if (int.TryParse(Console.ReadLine(), out int id))
+            {
+                ListOrders(id);
+                for (int i = 0; i < Orders.Count; i++)
+                {
+                    if (Orders[i].TableId == id)
+                    {
+                        bill += Orders[i].Price * Orders[i].quantity;
+                        Orders.RemoveAt(i);
+                        i--;
+                    }
+                }
+                if (bill > 0)
+                {
+                    Table selectedTable = SelectTable(id);
+                    if (selectedTable != null)
+                    {
+                        selectedTable.IsOccupied = false;
+                        Console.WriteLine($"Masa {id} için Hesap:{bill} ₺\nAfiyet Olsun, Yine Bekleriz!");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Girilen Masada Hesap Yok.");
+                }
+            }
+            else { Console.WriteLine("Geçersiz masa Idsi"); }
+        }
+    }
+}
+
+namespace RestaurantOtomasyonu
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Menu m1 = new Menu("yiyecek", "Kızartılmış Tavuk Kanatları", 200);
+            Menu m2 = new Menu("yiyecek", "Sebzeli Pizza", 250);
+            Menu m3 = new Menu("yiyecek", "Kumpir", 120);
+            Menu m4 = new Menu("icecek", "Taze Sıkılmış Portakal Suyu", 30);
+            Menu m5 = new Menu("icecek", "Ayran", 30);
+            Menu m6 = new Menu("tatli", "Baklava", 75);
+            Menu m7 = new Menu("tatli", "Çikolatalı Sufle", 87);
+
+
+            MainMenu();
+        }
+        internal static void MainMenu()
+        {
+            Table table1 = new Table();
+            Table table2 = new Table();
+            Table table3 = new Table();
+            Table table4 = new Table();
+            Table table5 = new Table();
+            Menu m = new Menu();
+            while (true)
+            {
+                Console.WriteLine("****ANA MENU****\n1-Sipariş Girişi\n2-Hesap Oluştur\n3-Menü Düzenle\n4-Çıkış");
+                string choice = Console.ReadLine();
+               if (choice == "1")//sipariş al
+                {
+                    Console.Clear();
+                    table1.TakeOrder();   
+                }
+                else if (choice == "2")//hesap al
+                {
+                    Console.Clear();
+                    table1.GenerateBill();
+                }
+                else if (choice == "3")
+                {
+                    Console.Clear();
+                    while(true){Console.WriteLine("****MENÜ DÜZENLE****\n1-Yeni Ürün Kaydı\n2-Ürün Düzenleme\n3-Ürün Silme\n4-Ana Menü");
+                    string subChoice= Console.ReadLine();
+                        if (subChoice == "1")
+                        {
+                            m.AddItemtoMenu();
+                        }
+                        else if (subChoice == "2")
+                        {
+                            m.UpdateMenu();
+                        }
+                        else if (subChoice == "3")
+                        {
+                            m.RemovefromMenu();
+                        }
+                        else if (subChoice == "4")
+                        {
+                            MainMenu();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Geçersiz Değer Girdiniz!");
+                            continue;
+                        }
+                    }
+                }
+                else if (choice == "4")
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("Geçersiz Değer Girdiniz!");
+                    continue;
+                }
+            }
+        }
+    }
+
+}
