@@ -12,7 +12,7 @@ namespace _18_OOP_2_RestaurantOtomasyonu
         public bool Dolu { get; set; }
         public List<Siparis> Siparisler { get; set; }
 
-        public Masa()
+        public Masa() //Constructor - Kurucu Metot => Instance alındığında direk çalışır
         {
             Siparisler = new List<Siparis>();
         }
@@ -28,6 +28,17 @@ namespace _18_OOP_2_RestaurantOtomasyonu
                 }
             }
             return null;
+        }
+
+        internal static void DoluMasa(List<Masa> liste)
+        {
+            foreach (Masa masa in liste)
+            {
+                if (masa.Dolu)
+                {
+                    Console.WriteLine("Masa-" + masa.Id);
+                }
+            }
         }
     }   
 }

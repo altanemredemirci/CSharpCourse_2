@@ -71,13 +71,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_2_Constructor", "18_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_2_RestaurantOtomasyonu", "18_OOP_2_RestaurantOtomasyonu\18_OOP_2_RestaurantOtomasyonu.csproj", "{D0E65DDA-6049-4FCA-B977-A909C3F8351B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_OOP_3_Encapsulation", "18_OOP_3_Encapsulation\18_OOP_3_Encapsulation.csproj", "{BFEBDC77-E7DE-4816-A0E9-584D4443A706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_3_Encapsulation", "18_OOP_3_Encapsulation\18_OOP_3_Encapsulation.csproj", "{BFEBDC77-E7DE-4816-A0E9-584D4443A706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_OOP_4_Inheritance", "18_OOP_4_Inheritance\18_OOP_4_Inheritance.csproj", "{C0FAD138-81CF-4A0E-966A-62CF7D66A4EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_4_Inheritance", "18_OOP_4_Inheritance\18_OOP_4_Inheritance.csproj", "{C0FAD138-81CF-4A0E-966A-62CF7D66A4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_OOP_4_Inheritance_1", "18_OOP_4_Inheritance_1\18_OOP_4_Inheritance_1.csproj", "{D263F918-0936-4776-9C4A-4F1133C34191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_4_Inheritance_1", "18_OOP_4_Inheritance_1\18_OOP_4_Inheritance_1.csproj", "{D263F918-0936-4776-9C4A-4F1133C34191}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_OOP_4_Inheritance_2", "18_OOP_4_Inheritance_2\18_OOP_4_Inheritance_2.csproj", "{13D29693-C9EE-473E-9D3D-A24ED83CF7EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_OOP_4_Inheritance_2", "18_OOP_4_Inheritance_2\18_OOP_4_Inheritance_2.csproj", "{13D29693-C9EE-473E-9D3D-A24ED83CF7EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18_OOP_4_Inheritance_3", "18_OOP_4_Inheritance_3\18_OOP_4_Inheritance_3.csproj", "{753893F8-CA9A-4B9B-8579-EE114E0A29DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17_Class_Object_3_Enum", "17_Class_Object_3_Enum\17_Class_Object_3_Enum.csproj", "{DDCC2D31-FC9D-4956-ADA5-3906CD39CAC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +241,14 @@ Global
 		{13D29693-C9EE-473E-9D3D-A24ED83CF7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13D29693-C9EE-473E-9D3D-A24ED83CF7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13D29693-C9EE-473E-9D3D-A24ED83CF7EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753893F8-CA9A-4B9B-8579-EE114E0A29DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753893F8-CA9A-4B9B-8579-EE114E0A29DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753893F8-CA9A-4B9B-8579-EE114E0A29DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753893F8-CA9A-4B9B-8579-EE114E0A29DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCC2D31-FC9D-4956-ADA5-3906CD39CAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCC2D31-FC9D-4956-ADA5-3906CD39CAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCC2D31-FC9D-4956-ADA5-3906CD39CAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCC2D31-FC9D-4956-ADA5-3906CD39CAC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

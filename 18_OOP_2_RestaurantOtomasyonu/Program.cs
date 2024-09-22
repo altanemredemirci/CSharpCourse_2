@@ -22,6 +22,9 @@ namespace _18_OOP_2_RestaurantOtomasyonu
             Hayır -> 1.masa 2. müşteri için aynı işlemleri yap
             Masadaki herkesin siparişi alındıysa tekrar ana menüye dön   
              */
+
+
+
             List<Masa> masalar = new List<Masa>()
             {
                 new Masa(){Id=1,Dolu=false},
@@ -32,6 +35,7 @@ namespace _18_OOP_2_RestaurantOtomasyonu
             };
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("1-Sipariş Al\n2-Hesap Al\n3-Menü Düzenle\n4-Çıkış\nSeçiminiz:");
                 int secim;
                 if ((int.TryParse(Console.ReadLine(), out secim)) && secim > 0 && secim < 5)
@@ -58,14 +62,33 @@ namespace _18_OOP_2_RestaurantOtomasyonu
                             bool cevap = Console.ReadLine().ToUpper() == "E" ? true : false;
                             if (!cevap)
                             {
+                                Console.Clear();
                                 i++;
                             }
                         }
                     }
+                    else if (secim == 2)
+                    {
+                        Masa.DoluMasa(masalar);
+
+                        Siparis.HesapAl(masalar);
+                    }
+                    else if (secim == 3) 
+                    {
+                        Yemek.MenuDuzenle();
+                    }
+                    else if (secim == 4) 
+                    {
+                        Console.WriteLine("Uygulama Kapatalıyor..");
+                        Thread.Sleep(3000);
+                        break;
+                    }
+                  
                 }
                 else
                 {
-                    Console.WriteLine("Seçiminizi Rakam Olarak ve 1 3 Aralığında Yapınız.");
+                    Console.Clear();
+                    Console.WriteLine("Seçiminizi Rakam Olarak ve 1 4 Aralığında Yapınız.");
                 }
             }
          

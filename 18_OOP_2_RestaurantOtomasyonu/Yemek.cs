@@ -26,5 +26,45 @@ namespace _18_OOP_2_RestaurantOtomasyonu
             new Yemek(){Id=9,Isim="Kola",Fiyat=80,Tip="içecek"},
             new Yemek(){Id=10,Isim="Şalgam",Fiyat=80,Tip="içecek"}
         };
+
+
+        internal static void MenuYaz()
+        {
+            foreach (Yemek yemek in Menu)
+            {
+                Console.WriteLine(yemek.Id + ":" + yemek.Isim + ":" + yemek.Fiyat);
+            }
+        }
+
+        internal static void MenuDuzenle()
+        {
+            if (Yonetici.GirisYap())
+            {
+                MenuYaz();
+                Console.WriteLine("Güncellenecek yemek numarası:");
+                int id = Convert.ToInt32(Console.ReadLine());
+
+                Yemek update = Menu.FirstOrDefault(i => i.Id == id);
+
+                if (update != null)
+                {
+                    Console.WriteLine("İsim:");
+                    update.Isim = Console.ReadLine();
+
+                    Console.WriteLine("Fiyat:");
+                    update.Fiyat = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Tip:");
+                    update.Tip = Console.ReadLine();
+
+                    Console.WriteLine("Güncellendi.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Yetkiniz Bulunmamaktadır.");
+            }
+        }
+
     }
 }
