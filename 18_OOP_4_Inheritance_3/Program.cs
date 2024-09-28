@@ -73,6 +73,31 @@
 
              */
 
+            List<Ogrenci> ogrenciler = new List<Ogrenci>();
+
+            //IlkOgretim ilkOgretim = new IlkOgretim("Altan Uras Demirci",1,"Mehmet Ali Yilmaz İlkokulu",OkulDuzeyi.IlkOgretim);
+            //IlkOgretim ilkOgretim2 = new IlkOgretim("Kıvanç Demirci",2,"",OkulDuzeyi.IlkOgretim);
+
+            //ogrenciler.Add(ilkOgretim);
+            //ogrenciler.Add(ilkOgretim2);
+
+
+            //ogrenciler.Add(new Lise("Kerem Demirci", 3, "Mehmet Ali Yilmaz İlkokulu", OkulDuzeyi.Lise,100,90));
+            
+            //ogrenciler.Add(new Lisans("Ceylan Demirci", 3, "Mehmet Ali Yilmaz İlkokulu", OkulDuzeyi.Lisans,"Eğitim Fakültesi",45,30));
+
+
+
+            ogrenciler.AddRange(new List<Ogrenci>()
+            {
+                new Lise("Kerem Demirci", 3, "Mehmet Ali Yilmaz İlkokulu", OkulDuzeyi.Lise,100,90),
+                new Lisans("Ceylan Demirci", 3, "Mehmet Ali Yilmaz İlkokulu", OkulDuzeyi.Lisans,"Eğitim Fakültesi",45,30),
+                new IlkOgretim("Altan Uras Demirci",1,"Mehmet Ali Yilmaz İlkokulu",OkulDuzeyi.IlkOgretim),
+                new OrtaOgretim("Kıvanç Demirci",2,"",OkulDuzeyi.OrtaOgretim)
+            });
+
+
+
         }
     }
 }
