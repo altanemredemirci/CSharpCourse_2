@@ -35,10 +35,7 @@
 
 
 
-            /*AŞAĞIDAKİ örnekte Daire, Kure ve Silindir sınıfları Sekil temel sınıfından türetilmişlerdir.
-            Hepsinde de Sekil sınıfında “virtual” tanımlanan alan metodu yeniden yazılmıştır. Bu
-            yeniden yazma (geçersiz kılma) esnasında “override” sözcüğünün kullanıldığına dikkat
-            ediniz. Ayrıca burada dikkat edilmesi gereken nokta “virtual” ve “override” metotların imzalarının (dönüş türleri ile birlikte parametrelerinin tür ve sayıları) aynı olması gerekliliğidir.
+         
 
             Ayrıca temel sınıfta “virtual”, “abstract” ya da “override” olarak tanımlanmış
             metotlar türemiş sınıfta geçersiz kılınabilir.
@@ -49,16 +46,37 @@
             Yani temel sınıfta metot “public” ise türemiş sınıfta da “public”, “protected” ise “protected” kalmalıdır.
             */
 
-            Matematik m = new Matematik();
-            m.Topla();
+            // *** STATIC POLYMORPHISM ***
+            //Matematik m = new Matematik();
+            //m.Topla();
+
+
+            Kopek kopek = new Kopek();
+            kopek.Konus();
+
+            Kedi kedi = new Kedi();
+            kedi.Konus();
+
+            Balina balina = new Balina();
+            balina.Konus();
+
+
+            Kurt kurt = new Kurt();
+            kurt.Konus();
+
         }
     }
 
+    // *** STATIC POLYMORPHISM ***
     class Matematik
     {
         public void Topla()
         {
-            Console.WriteLine(12+13);
+            Console.WriteLine("1.Sayı:");
+            int s1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("2.Sayı:");
+            int s2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(s1+s2);
         }
 
         public void Topla(int s1,int s2)
