@@ -60,4 +60,87 @@
          Bir arayüzü uygulamak için arayüzden kalıtımla alan ve arayüzde belirtilen tüm  yöntemleri sağlayan bir sınıf ya da yapı bildirilir. Öğrenme faaliyeti -1 içinde temel sınıf olan insan hatırlanmalıdır. Bu sınıfın içerisinde Buyu adında bir metot kullanılmıştı. Insan sınıfı IInsan adında bir arayüzü uyguluyor olsun. Bu arayüz de aşağıdaki gibi tanımlanmış olsun. */
         }
     }
+
+
+    class Insan
+    {
+        public abstract long TC { get; set; }
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
+    }
+
+    interface ICalisan
+    {
+        public int SGKNo { get; set; }
+        public int Maas { get; set; }
+
+        public int MaasHesapla();
+    }
+
+    interface IOzelIsci:ICalisan
+    {
+        public int SozlesmeTarihi { get; set; }
+    }
+
+    class Ogrenci : Insan
+    {
+        public int OkulNo { get; set; }
+    }
+
+    class Ogretmen : Insan,ICalisan
+    {
+        public string Brans { get; set; }
+        public int SGKNo { get; set; }
+        public int Maas { get; set; }
+
+        public int MaasHesapla()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class Mudur : Insan,ICalisan
+    {
+        public int OgretmenSayisi { get; set; }
+        public int SGKNo { get; set; }
+        public int Maas { get; set; }
+
+        public int MaasHesapla()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+    class Hizmetli : Insan, IOzelIsci
+    {
+        public int SozlesmeTarihi { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int SGKNo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Maas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int MaasHesapla()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    /*INTERFACE KULLANIMININ IMPLEMENTASYON KURALLARI*/
+
+    /*Bir arayüzü uygulandığında her metodun kendine uygun bir arayüz metoduyla tam
+      olarak eşleşmesi garantiye alınmalıdır.
+
+     Metot adları ve dönüş türleri kesin olarak eşleşmelidir.
+     Parametreler (ref ve out anahtar sözcükleri dahil) tam olarak eşleşmelidir.
+     Arayüz tanımı ve arayüz uygulaması arasında bir fark varsa uygulama
+    derlenmez.
+     Arayüzden türetilen sınıf içerisinde oluşturulan arayüze ait metotlar mutlaka
+    public olarak tanımlanmalıdır*/
+
+
+
+    /*BİR SINIFIN HEM SINIFTAN HEMDE INTERFACE DEN MIRAS ALMASI*/
+
+    /* Bir sınıf hem bir sınıftan devralıyor hem de bir arayüzü uyguluyorsa aşağıdaki gibi
+     kodlanır:*/
+
 }
