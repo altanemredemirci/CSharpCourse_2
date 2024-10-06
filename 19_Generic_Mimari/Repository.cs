@@ -8,10 +8,12 @@ namespace _19_Generic_Mimari
 {
     internal class Repository<T> where T:class
     {
+        List<T> liste = new List<T>();
         // T : Generic Type
 
         public virtual void Create(T entity)
         {
+            liste.Add(entity);
             //Databasedeki T tablosuna kayıt
         }
         public void Update(T entity)
