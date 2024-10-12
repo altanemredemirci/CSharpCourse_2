@@ -99,15 +99,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Generic_Inheritance", "1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Generic_Kisitlamalar", "19_Generic_Kisitlamalar\19_Generic_Kisitlamalar.csproj", "{E45BE064-D83E-45D2-9080-DFF352479119}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19_Generic_Collection", "19_generic_Collection\19_Generic_Collection.csproj", "{F1EBCD9B-8DFF-4F1E-9F3D-E6357FF0FC26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_Generic_Collection", "19_generic_Collection\19_Generic_Collection.csproj", "{F1EBCD9B-8DFF-4F1E-9F3D-E6357FF0FC26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_Abstraction", "20_Abstraction\20_Abstraction.csproj", "{8739EC03-0F21-4B8C-AAA6-410EF1D269AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_Abstraction", "20_Abstraction\20_Abstraction.csproj", "{8739EC03-0F21-4B8C-AAA6-410EF1D269AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_Abstraction_2", "20_Abstraction_2\20_Abstraction_2.csproj", "{F727444C-BF1A-4730-9440-9A19E1A3CE83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_Abstraction_2", "20_Abstraction_2\20_Abstraction_2.csproj", "{F727444C-BF1A-4730-9440-9A19E1A3CE83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_Interface", "21_Interface\21_Interface.csproj", "{A5FCD54C-A7C9-4606-9217-A20969693A1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_Interface", "21_Interface\21_Interface.csproj", "{A5FCD54C-A7C9-4606-9217-A20969693A1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_Interface_2", "21_Interface_2\21_Interface_2.csproj", "{243B8374-F05A-4764-9C4F-3194DE25060D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_Interface_2", "21_Interface_2\21_Interface_2.csproj", "{243B8374-F05A-4764-9C4F-3194DE25060D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_Ado.Net", "22_Ado.Net\22_Ado.Net.csproj", "{B098AEFD-085C-4E83-825E-94E76D9B00FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_Ado.Net_ExecuteNonQuery", "22_Ado.Net_ExecuteNonQuery\22_Ado.Net_ExecuteNonQuery.csproj", "{41585770-DAA4-4DAF-A374-9FB331260DA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +331,14 @@ Global
 		{243B8374-F05A-4764-9C4F-3194DE25060D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{243B8374-F05A-4764-9C4F-3194DE25060D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{243B8374-F05A-4764-9C4F-3194DE25060D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B098AEFD-085C-4E83-825E-94E76D9B00FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B098AEFD-085C-4E83-825E-94E76D9B00FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B098AEFD-085C-4E83-825E-94E76D9B00FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B098AEFD-085C-4E83-825E-94E76D9B00FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41585770-DAA4-4DAF-A374-9FB331260DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41585770-DAA4-4DAF-A374-9FB331260DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41585770-DAA4-4DAF-A374-9FB331260DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41585770-DAA4-4DAF-A374-9FB331260DA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

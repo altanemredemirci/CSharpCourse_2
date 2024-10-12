@@ -11,6 +11,7 @@
        
         }
     }
+
     //KOLEJ => Anasınıfı(Ad,Soyad,TC,Numara,Veli Numarası,BoyamaSayisi)
     //         İlkokul(Ad,Soyad,TC,Numara,Veli Numarası,KitapSayisi)
     //         Ortaokul(Ad,Soyad,TC,Numara,Veli Numarası,GeziSayisi)
@@ -51,10 +52,12 @@
     {
         public int KitapSayisi { get; set; }
     }
+
     class Ortaokul : Ogrenci
     {
         public int GeziSayisi { get; set; }
     }
+
     class Lise : Ogrenci
     {
         public string TelefonNumara { get; set; }
