@@ -27,14 +27,20 @@ namespace _22_Ado.Net
             //SqlConnection connect = new SqlConnection("Data Source=202-HOCAPC\\SQLDERS; Initial Catalog=OkulDB; User Id=sa; Password=1");
 
             //SqlConnection connect = new SqlConnection("Server=202-HOCAPC\\SQLDERS; Database=OkulDB; User Id=sa; Password=1");
-            #endregion
 
 
             //connect.Open();
             //Console.WriteLine("Bağlantı Yapıldı");
             //connect.Close();
             //Console.WriteLine("Bağlantı Kapatıldı");
+            #endregion
 
+            Execute execute = new Execute();
+
+            execute.CreateTable();
+            //execute.AddColumn();
+            //execute.AlterColumn("Ogrenci","Numara","int","Not Null");
+            //execute.DropColumn();
 
         }
     }
