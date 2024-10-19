@@ -11,7 +11,7 @@ namespace _22_Ado.Net_ExecuteNonQuery
     {
         public SqlConnection con;
 
-        public Execute()
+        public Execute()//Constructor
         {
             con = new SqlConnection("Server=202-HOCAPC\\SQLDERS; Database=OkulDB; User Id=sa; Password=1");
         }

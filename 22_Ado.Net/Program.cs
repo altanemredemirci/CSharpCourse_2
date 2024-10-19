@@ -19,7 +19,7 @@ namespace _22_Ado.Net
 
             #region SQLCONNECTION
             //Windows Authentication ConnectString
-            //SqlConnection connect = new SqlConnection("Data Source=202-HOCAPC\\SQLDERS; Initial Catalog=OkulDB; Integrated Security=true");
+            SqlConnection connect = new SqlConnection("Data Source=202-HOCAPC\\SQLDERS; Initial Catalog=OkulDB; Integrated Security=true");
 
             //SqlConnection connect = new SqlConnection("Server=202-HOCAPC\\SQLDERS; Database=OkulDB; Integrated Security=true");
 
