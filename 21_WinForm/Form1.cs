@@ -56,6 +56,9 @@ namespace _21_WinForm
             if (reader.Read())
             {
                 MessageBox.Show("Giriþ Baþarýlý");
+                this.Hide();
+                AnaForm form = new AnaForm();
+                form.Show();
             }
             else
             {
