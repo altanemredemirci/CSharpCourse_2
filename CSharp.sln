@@ -113,9 +113,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Ado.Net", "22_Ado.Net\22
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Ado.Net_ExecuteNonQuery", "22_Ado.Net_ExecuteNonQuery\22_Ado.Net_ExecuteNonQuery.csproj", "{41585770-DAA4-4DAF-A374-9FB331260DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22_Ado.Net_ExecuteReader", "22_Ado.Net_ExecuteReader\22_Ado.Net_ExecuteReader.csproj", "{858D3EE7-8162-496B-90EE-2486762F60FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22_Ado.Net_ExecuteReader", "22_Ado.Net_ExecuteReader\22_Ado.Net_ExecuteReader.csproj", "{858D3EE7-8162-496B-90EE-2486762F60FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_WinForm", "21_WinForm\21_WinForm.csproj", "{157E10E8-F0D0-4AA2-87E4-69679472CFB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_WinForm", "21_WinForm\21_WinForm.csproj", "{157E10E8-F0D0-4AA2-87E4-69679472CFB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_EntityFramework", "23_EntityFramework\23_EntityFramework.csproj", "{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -351,6 +353,10 @@ Global
 		{157E10E8-F0D0-4AA2-87E4-69679472CFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157E10E8-F0D0-4AA2-87E4-69679472CFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157E10E8-F0D0-4AA2-87E4-69679472CFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
