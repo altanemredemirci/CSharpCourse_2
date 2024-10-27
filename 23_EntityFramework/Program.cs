@@ -36,10 +36,30 @@
                  * Her migration kendisinden önce alınan migration'dan farkını tutar.
                  * Terminal alanına 'dotnet ef database update' komutu yazılarak çalıştırılır.
 
+
+            Tools->Package Manager Console -> Add-Migration CreateDatabase
+                                              Update-Database
              */
 
-            DataContext db = new DataContext();
+            Product p = new Product()
+            {
+                Name = "Etek",
+                Stock = 10,
+                Price = 1000,
+                CategoryName = "Giyim"
+            };
 
+            Product p2 = new Product();
+
+            p2.Name = "Laptop";
+            p2.Stock = 100;
+            p2.Price = 70000;
+            p2.CategoryName = "Elektronik";
+
+
+            Execute execute = new Execute();
+            execute.Insert(p);
+            execute.Insert(p2);
         }
     }
 }

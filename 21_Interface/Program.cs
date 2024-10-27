@@ -64,7 +64,7 @@
 
     class Insan
     {
-        public abstract long TC { get; set; }
+        //public abstract long TC { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
     }

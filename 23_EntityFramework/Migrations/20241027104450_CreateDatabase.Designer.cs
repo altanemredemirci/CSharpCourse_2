@@ -11,8 +11,8 @@ using _23_EntityFramework;
 namespace _23_EntityFramework.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241026115808_RemoveProduct")]
-    partial class RemoveProduct
+    [Migration("20241027104450_CreateDatabase")]
+    partial class CreateDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,10 @@ namespace _23_EntityFramework.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -39,12 +43,12 @@ namespace _23_EntityFramework.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<long>("Stock")
-                        .HasColumnType("bigint");
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Ürünler");
                 });
 #pragma warning restore 612, 618
         }

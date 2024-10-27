@@ -48,7 +48,7 @@ namespace _12_Methods
 
             //Topla(sayi1, sayi2);
 
-            DortIslem.Toplama();
+            //DortIslem.Toplama();
             
         }
 

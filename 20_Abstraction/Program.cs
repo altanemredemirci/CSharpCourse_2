@@ -10,7 +10,7 @@
             //Insan insan = new Insan();
 
             Ogrenci ogrenci = new Ogrenci();
-            ogrenci.
+            ogrenci.Ad = "Ali";
         }
     }
 
@@ -87,9 +87,10 @@
         }
     }
 
-    class Veli:Insan
+    class Veli : Insan
     {
         public string Telefon { get; set; }
+        public override long TC { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void Create()
         {

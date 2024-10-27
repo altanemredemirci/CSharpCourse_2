@@ -21,7 +21,7 @@
             Console.WriteLine("Final:");
             ogrenci._final = Convert.ToInt32(Console.ReadLine());
 
-            ogrenci.ortalama = 100;
+            
 
             Console.WriteLine(ogrenci.ortalama);
         }

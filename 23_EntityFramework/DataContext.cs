@@ -1,5 +1,4 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace _23_EntityFramework
         }
 
         // Database altında tablo olmasını istediğimiz her class DbSet<> tipinde tanımlanır.
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Urunler { get; set; }
     }
 
 }

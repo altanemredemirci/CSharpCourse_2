@@ -7,8 +7,8 @@
             Kategori kategori = new Kategori();
 
             Urun urun = new Urun();
-            urun.
-            urun.Create(urun);
+            
+            //urun.Create(urun);
 
 
             //Repository<Kategori> repository = new Repository<Kategori>();
