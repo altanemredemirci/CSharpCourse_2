@@ -119,7 +119,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_WinForm", "21_WinForm\21
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_EntityFramework", "23_EntityFramework\23_EntityFramework.csproj", "{88E27E1E-9297-41DB-AA0F-2CD22E9914C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23_EntityFramework_1_DBFirst", "23_EntityFramework_1_DBFirst\23_EntityFramework_1_DBFirst.csproj", "{1C9D1547-93C7-4528-96EB-88F4B6D04544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_EntityFramework_1_DBFirst", "23_EntityFramework_1_DBFirst\23_EntityFramework_1_DBFirst.csproj", "{1C9D1547-93C7-4528-96EB-88F4B6D04544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_Rent_A_Car", "24_Rent_A_Car\24_Rent_A_Car.csproj", "{3442D495-E1EF-46E5-8ECE-3052560A311C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +365,10 @@ Global
 		{1C9D1547-93C7-4528-96EB-88F4B6D04544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C9D1547-93C7-4528-96EB-88F4B6D04544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C9D1547-93C7-4528-96EB-88F4B6D04544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3442D495-E1EF-46E5-8ECE-3052560A311C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3442D495-E1EF-46E5-8ECE-3052560A311C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3442D495-E1EF-46E5-8ECE-3052560A311C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3442D495-E1EF-46E5-8ECE-3052560A311C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
