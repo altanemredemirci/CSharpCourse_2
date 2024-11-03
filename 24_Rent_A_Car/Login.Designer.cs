@@ -79,8 +79,10 @@
             // 
             txt_password.Location = new Point(95, 102);
             txt_password.Name = "txt_password";
+            txt_password.PasswordChar = '*';
             txt_password.Size = new Size(195, 29);
             txt_password.TabIndex = 3;
+            txt_password.Text = "1";
             // 
             // label2
             // 
@@ -97,6 +99,7 @@
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(195, 29);
             txt_phone.TabIndex = 1;
+            txt_phone.Text = "5366295131";
             // 
             // label1
             // 

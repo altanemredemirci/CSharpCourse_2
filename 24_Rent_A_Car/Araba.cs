@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _24_Rent_A_Car
 {
-    internal class Araba
+    public class Araba
     {
         //Her kaydın benzersiz bir değere ihtiyacı var. Id PK ve Identity sahip olacak.
         //EF bu özellikleri Id, id, ID, iD vb tanım gördüğünde otomatik verir.
@@ -17,7 +17,8 @@ namespace _24_Rent_A_Car
         public string Model { get; set; }
         public string Yakit { get; set; }
         public double Km { get; set; }
-        public string Vites { get; set; }
+                
+        public string? Vites { get; set; }
         public decimal Fiyat { get; set; }
 
 

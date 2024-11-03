@@ -28,6 +28,13 @@ namespace _24_Rent_A_Car
                 return;
             }
 
+            var customer = db.Musteris.Where(i=> i.Telefon==txt_Rphone.Text).FirstOrDefault();
+            if(customer != null)
+            {
+                MessageBox.Show("Kayıtlı Müşteri!!!");
+                return ;
+            }
+
             Musteri musteri = new Musteri();
             musteri.Telefon = txt_Rphone.Text;
             musteri.Bakiye = Convert.ToDouble(txt_Rbalance.Text);
@@ -35,7 +42,20 @@ namespace _24_Rent_A_Car
             musteri.Password = txt_Rpass.Text;
 
             db.Musteris.Add(musteri);
-            db.SaveChanges();
+            int EKS = db.SaveChanges();
+            if(EKS> 0) 
+            {
+                MessageBox.Show("Kayıt Başarılı");
+                txt_Rpass.Clear();
+                txt_Rpass2.Clear();
+                txt_Rname.Clear();
+                txt_Rphone.Clear();
+                txt_Rbalance.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Başarısız!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -50,10 +70,11 @@ namespace _24_Rent_A_Car
                 MessageBox.Show("Giriş Bilgileri Hatalı!");
                 txt_password.Clear();
             }
-            else 
+            else
             {
+                MessageBox.Show("Giriş Bilgileri Başarılı","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Hide();
-                Form1 form = new Form1();
+                ArabaForm form = new ArabaForm(musteri);
                 form.Show();
             }
         }
